@@ -5,9 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
     <link rel="stylesheet" href="style.css">
-    <script src="javascript.js"></script>
+    <script src="javascript.js" defer></script>
 </head>
 <body>
-    
+    <header>
+        <h1 id="libraryLogo">library</h1>
+        <button id="logInBtn">Log In</button>
+    </header>
+    <div id="libraryContainer">
+        <div id="library">
+            <!-- <div class="bookCard">
+                <p class="cardTitle">title</p>
+                <p class="cardAuthor">author</p>
+                <p class="cardPages">54 pages</p>
+                <div class="readDisplay"></div>
+                <button class="removeBtn" type="button"></button>
+            </div> -->
+        </div>
+        <button id="addBook" type="button">+ Add Book</button>
+        <dialog>
+            <div class="dialogContainer">
+                <h2>Add New Book</h2>
+                <input type="text" placeholder="Title" id="title" name="title">
+                <input type="text" placeholder="Author" id="author" name="author">
+                <input type="number" placeholder="Pages" id="pages" name="pages">
+                <div class="checkboxContainer">
+                    <label for="readCheckbox">Reading Completed</label>
+                    <input type="checkbox" id="readCheckbox" name="readCheckbox">
+                </div>
+                <button type="button" id="submit">Submit</button>
+            </div>
+        </dialog>
+    </div>
+    <footer>github.com/AaronDKP</footer>
 </body>
 </html>

@@ -1,0 +1,234 @@
+@font-face {
+    font-family: "Roboto";
+    src: url(font/Roboto-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    font-family: "Roboto", "Times New Roman", Verdana, Arial, Helvetica;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.2);
+}
+
+header>h1 {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+header>button {
+    background: none;
+    border: none;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+header>button:hover, header>h1:hover {
+    color: #475569;
+}
+
+#libraryContainer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: #f1f5f9;
+}
+
+#library {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    column-gap: 20px;
+    margin: 10px 20px;
+}
+
+#libraryContainer>button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 20px;
+    align-self: center;
+    width: 20%;
+}
+
+#libraryContainer>button:hover {
+    color: #475569;
+}
+
+#libraryContainer>button:active {
+    color: #000;
+}
+
+.bookCard {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    row-gap: 10px;
+    width: 80%;
+    height: 25vh;
+    margin: 5% 10%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: 700;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+}
+
+.bookCard:hover {
+    transition: 0.1s;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+}
+
+.readDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #fda4af;
+    border-radius: 6px;
+    font-size: 0.9em;
+}
+
+.readDisplay:hover {
+    background-color: #fb7185;
+}
+
+.readDisplay:active {
+    background-color: #fda4af;
+}
+
+.readDisplay:after {
+    content: 'Not Read';
+}
+
+.readDisplay.read {
+    background-color: #86efac;
+}
+
+.readDisplay.read:hover {
+    background-color: #4ade80;
+}
+
+.readDisplay.read:active {
+    background-color: #86efac;
+}
+
+.readDisplay.read:after {
+    content: 'Read';
+}
+
+.removeBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e2e8f0;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.removeBtn:hover {
+    background-color: #fda4af;
+}
+
+.removeBtn:active {
+    background-color: #fb7185;
+}
+
+.removeBtn:after {
+    content: 'Remove';
+}
+
+dialog {
+    height: 50vh;
+    min-width: 300px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f1f5f9;
+}
+
+.dialogContainer {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    place-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.dialogContainer>input {
+    border: none;
+    border-radius: 6px;
+    height: 40px;
+    width: 90%;
+    padding-left: 10px;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.dialogContainer>input:hover {
+    border: solid 2px #cbd5e1;
+}
+
+.checkboxContainer {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+}
+
+.dialogContainer>button {
+    width: 90%;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    background-color: #4ade80;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.dialogContainer>button:hover {
+    background-color: #86efac;
+}
+
+.dialogContainer>button:active {
+    background-color: #4ade80;
+}
+
+::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 1em;
+    font-weight: 700;
+    box-shadow: 0 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+
+
